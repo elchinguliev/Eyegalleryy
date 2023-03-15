@@ -1,0 +1,94 @@
+﻿<Window x:Class="EyeGallery2.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyeGallery2"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Canvas Grid.Column="0" >
+            <Label BorderBrush="Black" Content="Photos" Canvas.Left="25" Canvas.Top="11" Height="40" Width="100" FontSize="22" Foreground="Black"></Label>
+        </Canvas>
+        <Canvas>
+            <Button Background="Transparent" Content="X" Name="w2Xbutton" Canvas.Left="360" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="35" Height="41" FontSize="20" Click="w2Xbutton_Click" >
+            </Button>
+        </Canvas>
+        <Canvas >
+            <Button Background="Transparent" Name="w2minButton" FontSize="20" Content="Min" Canvas.Left="258" Canvas.Top="10" HorizontalAlignment="Left" Height="41" VerticalAlignment="Center" Width="52" Click="w2minButton_Click"></Button>
+        </Canvas>
+        <Canvas Margin="-10,0,10,0" >
+            <Button Background="Transparent" Name="w2maxButton" FontSize="20" Content="Max" Canvas.Left="319" Canvas.Top="10" HorizontalAlignment="Left" Height="41" VerticalAlignment="Center" Width="52" Click="w2maxButton_Click" ></Button>
+        </Canvas>
+
+        <Canvas Grid.Row="0" Grid.ColumnSpan="1">
+            <!--<Button Name="fileBtn" Content="File" Height="27" Width="63" Canvas.Left="27" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>
+            <Button Name="editBtn" Content="Edit" Height="27" Width="63" Canvas.Left="95" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Button>
+            <Button Name="viewBtn" Content="View" Height="27" Width="63" Canvas.Left="163" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Button>
+            <Button Name="aboutBtn" Content="About" Height="27" Width="63" Canvas.Left="231" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="1.246,0.58"></Button>-->
+        </Canvas>
+        <Canvas Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="3" >
+            <Button Click="previousBtn_Click" Name="previousBtn" FontSize="20" Width="68" Height="65" Canvas.Left="219" Canvas.Top="400" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image  Source="https://cdn-icons-png.flaticon.com/512/159/159769.png">
+                </Image>
+            </Button>
+
+            <Button FontSize="20" Width="68" Height="65" Canvas.Left="453" Canvas.Top="400" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image Source=" http://cdn.onlinewebfonts.com/svg/img_331379.png">
+                </Image>
+            </Button>
+            <Button Click="nxtBtn_Click_1" Name="nxtBtn" FontSize="20" Width="68" Height="65" Canvas.Left="553" Canvas.Top="400" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image Source="https://cdn-icons-png.flaticon.com/512/1932/1932871.png">
+                </Image>
+            </Button>
+            <Button FontSize="20" Width="68" Height="65" Canvas.Left="325" Canvas.Top="400" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image Source=" https://cdn-icons-png.flaticon.com/512/786/786279.png ">
+                </Image>
+            </Button>
+            <Button Name="backBtn" FontSize="20" Width="30" Height="30" Canvas.Left="30" Canvas.Top="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="backBtn_Click">
+                <Image Source=" https://icon-library.com/images/back-icon/back-icon-9.jpg ">
+                </Image>
+            </Button>
+        </Canvas>
+        <Canvas>
+            <Menu  Canvas.Left="27" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"  >
+                <MenuItem Header="_File" >
+                    <MenuItem Header="_New"  />
+                    <MenuItem Header="_Open" />
+                    <MenuItem Header="_Save" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+            </Menu>
+            <Menu Canvas.Left="95" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"  >
+                <MenuItem Header="_Edit" >
+                    <MenuItem Header="_Add File"  />
+                    <MenuItem Header="_Add Folder" />
+                </MenuItem>
+            </Menu>
+            <Menu Canvas.Left="163" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"  >
+                <MenuItem Header="_View" >
+                    <MenuItem Header="_Small icons"  />
+                    <MenuItem Header="_Details" />
+                </MenuItem>
+            </Menu>
+            <Menu Canvas.Left="231" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <MenuItem Header="_About" >
+                    <MenuItem Header="_About"  />
+                </MenuItem>
+            </Menu>
+        </Canvas>
+    </Grid>
+</Window>

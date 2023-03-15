@@ -1,0 +1,103 @@
+﻿<Window x:Class="EyeGallery2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EyeGallery2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Canvas  >
+
+            <Button Name="image1" Canvas.Top="100" Canvas.Left="20" FontSize="10" Click="image1_Click">
+                <Image Width="110" Height="80" Source="Images/ee.jpg"  RenderTransformOrigin="0.479,0.492" Stretch="Fill">
+                </Image>
+            </Button>
+            <Button Name="image2" Canvas.Top="100" Canvas.Left="150" FontSize="10" Click="image2_Click">
+                <Image Width="110" Height="80" Source="Images/ww.jpg" RenderTransformOrigin="0.479,0.492" Stretch="Fill">
+                </Image>
+            </Button>
+            <Button Name="image3" Canvas.Top="100" Canvas.Left="280" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Center" Click="image3_Click" Width="117">
+                <Image Width="110" Stretch="Fill" Height="80" Source="Images/yy.png" RenderTransformOrigin="0.479,0.492">
+                </Image>
+            </Button>
+            <Button Name="image4" Canvas.Top="200" Canvas.Left="20" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="117" Click="image4_Click">
+                <Image Width="110" Stretch="Fill" Height="80" Source="Images/ww.jpg" RenderTransformOrigin="0.479,0.492">
+                </Image>
+            </Button>
+            <Button Name="image5" Canvas.Top="200" Canvas.Left="150" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="117" Click="image5_Click">
+                <Image Width="100" Stretch="Fill" Height="80" Source="Images/pp.jpg" RenderTransformOrigin="0.479,0.492">
+                </Image>
+            </Button>
+            <Button  Name="image6" Canvas.Top="200" Canvas.Left="280" FontSize="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="117" Click="image6_Click">
+                <Image Width="110"    Height="80" Stretch="Uniform" Source="Images/22222.jpg" RenderTransformOrigin="0.479,0.492">
+                </Image>
+            </Button>
+
+
+        </Canvas>
+        <Canvas Grid.Column="0" >
+            <Label BorderBrush="Black" Content="Photos" Canvas.Left="25" Canvas.Top="11" Height="40" Width="100" FontSize="22" Foreground="Black"></Label>
+        </Canvas>
+        <Canvas>
+            <Button Background="Transparent" Content="X" Name="Xbutton" Canvas.Left="360" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="35" Height="41" FontSize="20" Click="Xbutton_Click" >
+            </Button>
+        </Canvas>
+        <Canvas >
+            <Button Background="Transparent" Name="minButton" FontSize="20" Content="Min" Canvas.Left="258" Canvas.Top="10" HorizontalAlignment="Left" Height="41" VerticalAlignment="Center" Width="52" Click="minButton_Click"></Button>
+        </Canvas>
+        <Canvas Margin="-10,0,10,0" >
+            <Button Background="Transparent" Name="maxButton" FontSize="20" Content="Max" Canvas.Left="319" Canvas.Top="10" HorizontalAlignment="Left" Height="41" VerticalAlignment="Center" Width="52" Click="maxButton_Click" ></Button>
+        </Canvas>
+
+        <Canvas Grid.Row="0" Grid.ColumnSpan="1">
+            <!--<Button Name="fileBtn" Content="File" Height="27" Width="63" Canvas.Left="27" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"></Button>-->
+            <!--<Button Name="editBtn" Content="Edit" Height="27" Width="63" Canvas.Left="95" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Button>-->
+            <!--<Button Name="viewBtn" Content="View" Height="27" Width="63" Canvas.Left="163" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"></Button>-->
+            <!--<Button Name="aboutBtn" Content="About" Height="27" Width="63" Canvas.Left="231" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="1.246,0.58"></Button>-->
+        </Canvas>
+        <Canvas>
+            <Menu Canvas.Left="27" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"  >
+                <MenuItem Header="_File" >
+                    <MenuItem Header="_New"  />
+                    <MenuItem Header="_Open" />
+                    <MenuItem Header="_Save" />
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+            </Menu>
+            <Menu Canvas.Left="95" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"  >
+                <MenuItem Header="_Edit" >
+                    <MenuItem Header="_Add File"  />
+                    <MenuItem Header="_Add Folder" />
+                </MenuItem>
+            </Menu>
+            <Menu Canvas.Left="163" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"  >
+                <MenuItem Header="_View" >
+                    <MenuItem Header="_Small icons"  />
+                    <MenuItem Header="_Details" />
+                </MenuItem>
+            </Menu>
+            <Menu Canvas.Left="231" Canvas.Top="60" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <MenuItem Header="_About" >
+                    <MenuItem Header="_About"  />
+                </MenuItem>
+            </Menu>
+
+            <TextBox AcceptsReturn="True" />
+        </Canvas>
+
+    </Grid>
+</Window>
